@@ -49,7 +49,8 @@ app.post('/api/tasks', async (req, res) => {
     try {
         const task = new Task({
             title: req.body.title,
-            description: req.body.description
+            description: req.body.description,
+            status: req.body.status || 'pending' 
         });
         await task.save();
         res.send(task);
