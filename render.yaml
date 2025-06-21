@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: task-manager
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGODB_URI
+        fromDatabase:
+          name: taskmanager-db
+          property: connectionString
+      - key: PORT
+        value: 3000
+    healthCheckPath: /api/tasks
