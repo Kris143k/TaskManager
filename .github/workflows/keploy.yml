@@ -46,7 +46,7 @@ jobs:
         export KEPLOY_API_KEY=s9zKiW3cqi5v3gXdTg== && keploy test-suite --app=5523bfde-e6e9-410e-a455-70759190f35f --base-path https://taskmanager-xs8k.onrender.com/ --cloud
         
     - name: Upload test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: keploy-results
         path: keploy-results/
