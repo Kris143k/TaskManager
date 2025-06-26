@@ -84,3 +84,20 @@ To generate a coverage report:
 ```bash
 npm run test:coverage
 ```
+## API Testing with Keploy
+
+We use Keploy for AI-powered API testing. Here's our test report:
+
+![Keploy Test Results](keploy-results.png)
+
+## CI/CD Pipeline
+
+Our GitHub Actions workflow runs:
+1. Unit tests
+2. Integration tests
+3. API tests
+4. Keploy AI tests
+
+[View CI/CD Configuration](.github/workflows/ci.yml)
+
+![CI/CD Pipeline](keploy-test.png)
